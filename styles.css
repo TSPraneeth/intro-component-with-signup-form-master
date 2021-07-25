@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root
+{
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.grid_container
+{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: 
+        "desc"
+        "form";
+    background: url("./images/bg-intro-mobile.png"),linear-gradient(hsla(0, 100%, 74%,1),hsla(0, 100%, 74%,1));
+}
+
+.centering
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.left_side
+{
+    grid-area: desc;
+    gap: 1.5rem;
+    flex-direction: column;
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 3rem;
+}
+
+.right_side
+{
+    grid-area: form;
+    margin-bottom: 2rem;
+}
+
+.full_white
+{
+    color: rgb(255, 255, 255,0.95);
+}
+
+.mild_white
+{
+    color: rgb(255, 255, 255,0.85);
+}
+
+.heading
+{
+    
+    line-height: 2rem; 
+    width: 80%;
+}
+
+.desc
+{
+    width: 85%;
+}
+
+.try
+{
+    padding: 1rem 3rem;
+    background-color: var(--Blue);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.myform
+{
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    padding: 2.5rem 2.5rem;
+}
+
+input
+{
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+input:focus
+{
+    outline: 0;
+    border: 1px solid var(--Blue);
+}
+
+::placeholder
+{
+    font-weight: 600;
+}
+
+.msg
+{
+    margin-top: 0.2rem;
+    text-align: right;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: var(--Red);
+}
+
+.ico
+{
+    position: absolute;
+    right: 50px;
+    display: none;
+}
+
+.error_icon
+{
+    top:50px;   
+}
+
+.error_icon1
+{
+    top:140px;   
+}
+
+.error_icon2
+{
+    top:228px;  
+}
+
+.error_icon3
+{
+    top:315px;  
+}
+
+
+.claim
+{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    background-color: var(--Green);
+    border: 0;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.tc
+{
+    color: var(--Grayish-Blue);
+    font-size: 0.65rem;
+}
+
+.ts
+{
+    color: var(--Red);
+    font-weight: 700;
+}
+
+.shadow
+{
+    box-shadow:0 8px 5px 0 rgba(0, 0,0, 0.2);
+}
+
+@media screen and (min-width:825px) {
+    .grid_container
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: unset;
+        grid-template-areas: 
+            "desc form";
+    }
+
+    .left_side
+    {
+        align-self: center;
+    }
+
+    .right_side
+    {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .right_side
+    {
+        max-width: 80%;
+    }
+
+    .left_side
+    {
+        padding: 150px 40px 150px 122px;
+    }
+
+    .left_desktop
+    {
+        width: unset;
+        text-align: left;
+        margin: 0;
+    }
+
+    .heading
+    {
+        font-size: 3rem;
+        line-height: 3.2rem;
+    }
+
+    .desc
+    {
+        font-size: 1.2rem;
+    }
+
+    
+}
+
